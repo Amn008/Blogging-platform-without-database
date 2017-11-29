@@ -68,6 +68,8 @@ $member->appendChild($password);
 $DOB=$xml->createElement("DOB",$DOB);
 $member->appendChild($DOB);
 
+$xml = new DOMDocument;
+$xml->load("login.xml");
 $xml->save("login.xml");
 echo "<p style='font-family:cursive;font-size:20px;color:black;margin:30px'><b>Your are signed up SUCCESSFULLY!</b></p>";
 }

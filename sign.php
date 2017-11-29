@@ -56,22 +56,22 @@ return false;}
 <?php
 if(isset($_POST['login']))
 {
-	$fname = $_POST['fname'];
-$password = $_POST['password'];
-$xml2 = simplexml_load_file('login.xml');
-foreach($xml2->member as $member) { // for every user node
-    if($member->fname == $fname && $member->password == $password) {
-        echo '<form action="" id="form2" style="font-size:30px;padding:10px" method="post" onsubmit="return validate()">
-	Editor Name:<input type="text" name="name"/><br>
-	Date:<input type="date" name="date"/><br>
-	Title:<input type="text" name="title"/><br>
-	Content:<br>
-	<textarea name="content" rows="10" cols="100"></textarea><br> 
-	<input type="submit" name="submit" value="submit"/>
-    </form>';
-    echo '<script>
-       document.getElementById("form3").style.display="none";
-       </script>';
+//	$fname = $_POST['fname'];
+//	$password = $_POST['password'];
+	$xml2 = simplexml_load_file('login.xml');
+	foreach($xml2->member as $member) { // for every user node
+    	if($member->fname == $_POST['fname'] && $member->password == $_POST['password']) {
+        	echo '<form action="" id="form2" style="font-size:30px;padding:10px" method="post" onsubmit="return validate()">
+		Editor Name:<input type="text" name="name"/><br>
+		Date:<input type="date" name="date"/><br>
+		Title:<input type="text" name="title"/><br>
+		Content:<br>
+		<textarea name="content" rows="10" cols="100"></textarea><br> 
+		<input type="submit" name="submit" value="submit"/>
+	    </form>';
+    	echo '<script>
+       	document.getElementById("form3").style.display="none";
+       	</script>';
 }
 // else{
 // 	echo "<p style='font-family:cursive;font-size:20px;color:black;margin:30px'><b>Sign up First!</b></p>";
