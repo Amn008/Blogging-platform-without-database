@@ -10,4 +10,16 @@
     <password>12345678</password>
     <email>amandalal025@gmail.com</email>
   </member>
+  <member>
+    <fname>utkarsh</fname>
+    <email>utkarshmalik211@gmail.com</email>
+    <password>123456</password>
+    <DOB>1900-06-13</DOB>
+  </member>
+  <member>
+    <fname>abc</fname>
+    <email>abc@gmail.com</email>
+    <password>123</password>
+    <DOB>2017-11-02</DOB>
+  </member>
 </members>
